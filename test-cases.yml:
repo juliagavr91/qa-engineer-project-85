@@ -572,7 +572,7 @@
     - Кнопкой "Other actions" вызвать функцию "Give up"- сдаться 
     - Появляется модальное окно "Are you sure you want to give up?"
     - Нажать "Give up"
-    - Появляется можальное окно "If you read this you've lost the game"
+    - Появляется модальное окно "If you read this you've lost the game"
     - Нажать I'll be back
   expected-result: |
     Вы проиграли. Игра окончена
@@ -606,6 +606,133 @@
     Начинается новая битва с предыдущим игроком, с предыдущими исходными данными
 
 - summary: |
+    Проверка возможности сбросить код и начать писать заново
+  requirement: |
+    Пользователь имеет возможность сбросить игру и начать писать код заново
+  prerequisites: |
+    Открыта страница проекта https://codebattle.hexlet.io
+  test-data: |
+    - empty
+  steps:
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем кнопку «Войти»
+    - Нажать "Create a game"
+    - Тип игры "With a bot"
+    - Уровень 1
+    - Time control - 10 min
+    - Tags = math
+    - Choose task by name or tags - rect_area
+    - Нажать Create battle
+    - Кнопкой "Other actions" вызвать функцию "Reset solution"
+  expected-result: |
+    Перезагружается терминал и возвращает к исходным данным
+
+- summary: |
+    Проверка возможности вернуться в игру если пользователь вылетел
+  requirement: |
+    Пользователь имеет возможность вернуться в игру если он вылетел и время еще не закончилось
+  prerequisites: |
+    Открыта страница проекта https://codebattle.hexlet.io
+  test-data: |
+    - empty
+  steps:
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем кнопку «Войти»
+    - Нажать "Create a game"
+    - Тип игры "With a bot"
+    - Уровень 1
+    - Time control - 10 min
+    - Tags = math
+    - Choose task by name or tags - rect_area
+    - Нажать Create battle
+    - Нажать Back to home
+    - Перезагрузить страницу
+    - На главном экране нажать кнопку Continue
+  expected-result: |
+    Пользователь должен вернуться в игру и имеет возможность продолжить баттл
+
+- summary: |
+    Проверка возможности менять язык поля с задачей с ангилйского на русский и обратно
+  requirement: |
+    Пользователь имеет возможность менять язык задачи (с английского на русский и обратно)
+  prerequisites: |
+    Открыта страница проекта https://codebattle.hexlet.io
+  test-data: |
+    - empty
+  steps:
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем кнопку «Войти»
+    - Нажать "Create a game"
+    - Тип игры "With a bot"
+    - Уровень 1
+    - Time control - 10 min
+    - Tags = math
+    - Choose task by name or tags - rect_area
+    - Нажать Create battle
+    - В окошке выбора языка выбрать RU
+    - В окошке выбора языка выбрать EN
+  expected-result: |
+    Пользователь имеет возможность решать задачу на русском или английском языках
+
+- summary: |
+    Проверка уведомления при выигрыше на баттле
+  requirement: |
+    Пользователь должен получить уведомление что он выиграл битву
+  prerequisites: |
+    Открыта страница проекта https://codebattle.hexlet.io
+  test-data: |
+    - empty
+  steps:
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем кнопку «Войти»
+    - Нажать "Create a game"
+    - Тип игры "With a bot"
+    - Уровень 1
+    - Time control - 10 min
+    - Tags = math
+    - Choose task by name or tags - rect_area
+    - Нажать Create battle
+    - Ввести в терминале верный ответ
+             const _ = require("lodash");
+             const R = require("rambda");
+
+             const solution = (width, length) => {
+               return width * length;
+             };
+    
+             module.exports = solution;
+    - Нажать Run
+  expected-result: |
+    Пользователь должен увидеть в модальном окне что победил
+
+- summary: |
+    Проверка уведомления при проигрыше на батлле
+  requirement: |
+    Пользователь должен получить уведомление что он проиграл битву
+  prerequisites: |
+    Открыта страница проекта https://codebattle.hexlet.io
+  test-data: |
+    - empty
+  steps:
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем кнопку «Войти»
+    - Нажать "Create a game"
+    - Тип игры "With a bot"
+    - Уровень 1
+    - Time control - 10 min
+    - Tags = math
+    - Choose task by name or tags - rect_area
+    - Нажать Create battle
+    - Кнопкой "Other actions" вызвать функцию "Give up"- сдаться
+  expected-result: |
+    Пользователь должен получить уведомление что проиграл битву
+
+- summary: |
     Краткое описание тест-кейса. Пример: Проверка входа пользователя с существующими логином и паролем
   requirement: |
     Тестируемое требование. Например: При верном вводе логине и пароля пользователь должен войти в систему
@@ -621,8 +748,6 @@
     - Нажимаем кнопку «Войти»
   expected-result: |
     Пользователь должен попасть на главную страницу
-
-    
 
 
     
