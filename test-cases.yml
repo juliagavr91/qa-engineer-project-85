@@ -118,6 +118,7 @@
   prerequisites: |
     Открыта страница проекта https://codebattle.hexlet.io
   test-data: |
+    - empty
   steps:
     - Нажимаем "Sign up"
     - Вводим уникальный никнейм
