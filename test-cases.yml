@@ -81,7 +81,7 @@
     - Нажать "Create a game"
     - Выбрать уровень 1
     - Выбрать "With other user"
-    - "Time control" = "8 min"
+    - Time control - 8 min
     - Выбрать тип задачи "Choose task by name or tags" = "rect-area"
     - Нажать  на кнопку "Create battle"
   expected-result: |
@@ -102,7 +102,7 @@
     - Нажать "Create a game"
     - Выбрать уровень 1
     - Выбрать "With a friend"
-    - "Time control" = "8 min"
+    - Time control - 8 min
     - Выбор соперника "Choose opponent", выбрать из выпадающего списка 
     - Выбрать тип задачи "Choose task by name or tags" = "rect-area"
     - Нажать "Create invite"
