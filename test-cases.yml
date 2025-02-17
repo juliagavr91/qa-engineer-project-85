@@ -31,11 +31,10 @@
   requirement: |
     При наличии аккаунта в Github, пользователь может подтвердить свои данные с помощью Github
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать на кнопку "Sign in"
     - На странице регистрации нажать на кнопку "Sign in with Github"
     - Ввести актуальные данные своего аккаунта в Github
     - Нажать на кнопку "Sign in"
@@ -47,12 +46,11 @@
   requirement: |
     Пользователь может зарегистрироваться используя свой Email
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     Тестовые данные
     - empty
   steps:
-    - Нажать на кнопку "Sign up"
     - Пишем свой уникальный никнейм
     - Адрес электронной почты
     - Пароль
@@ -62,11 +60,28 @@
     Пользователь должен попасть на главную страницу баттла
 
 - summary: |
+    Проверка успешной авторизации
+  requirement: |
+    После успешной авторизации пользователь должен попасть на главную страницу баттла
+  prerequisites: |
+    Открыта страница проекта https://codebattle.hexlet.io
+  test-data: |
+    - empty
+  steps:
+    - Нажать "Sign up
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем кнопку «Войти»
+  expected-result: |
+    Пользователь должен попасть на главную страницу баттла и иметь возможность начать игру с другим пользователем,с другом или с ботом
+    Может писать в чат, видеть лобби, турнирную
+
+- summary: |
     Проверка создания игры с ботом
   requirement: |
     Возможность создания игры с ботом с авторизацией
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
     Например: открыта страница логина
   test-data: |
     - empty
@@ -89,11 +104,10 @@
   requirement: |
     Возможность создания игры с другим пользователем с авторизацией
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Авторизоваться 
     - Нажать "Create a game"
     - Выбрать уровень 1
@@ -111,11 +125,10 @@
   requirement: |
     Возможность создания игры с другом
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Авторизоваться
     - Нажать "Create a game"
     - Выбрать уровень 1
@@ -206,11 +219,10 @@
   requirement: |
     После авторизации пользователь должен видеть онлайн-игроков
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -222,11 +234,10 @@
   requirement: |
     Пользователь может просматривать профили других участников 
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -241,11 +252,10 @@
   requirement: |
     Пользователь имееть возможность общаться в чате со своим соперником
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -265,11 +275,10 @@
   requirement: |
     Пользователь может отправить приглашение сыграть в игру любому игроку онлайн
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -287,11 +296,10 @@
   requirement: |
     Пользователь имеет возможность отправлять сообщения другим пользователям
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -306,11 +314,10 @@
   requirement: |
     Зарегистрированный пользователь может просматривать таблицу лидеров (по месяцам, по неделям, за все время)
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -326,11 +333,10 @@
   requirement: |
     Возможность найти участника в рейтинге пользователей по Nickname
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -345,11 +351,10 @@
   requirement: |
     Пользователель может отображать по 20,30,40,50 участников на странице рейтинга пользователей
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -363,11 +368,10 @@
   requirement: |
     У пользователся должна быть возможность сортировать участников по количеству игр на странице рейтинга пользователей (по возрастанию, по убыванию)
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -384,11 +388,10 @@
   requirement: |
     У пользователся должна быть возможность сортировать по рейтингу на странице рейтинга пользователей (по возрастанию,по убыванию)
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -405,11 +408,10 @@
   requirement: |
     Пользователь должен иметь возможность сортировать по участников по дате регистрации
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps: 
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -426,11 +428,10 @@
   requirement: |
     Пользователь должен иметь возможность выбирать сложность игры
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
      - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -448,12 +449,11 @@
   requirement: |
     Пользователь имеет возможность выбрать одну из предложенных задач для создания игры
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     Тестовые данные
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -471,11 +471,10 @@
   requirement: |
     Пользователь перед тем как выбрать задачу имеет возможность сортировать список задач по тегам
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -494,11 +493,10 @@
   requirement: |
     Пользователь может выбирать продолжительсть игры
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
      - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -517,11 +515,10 @@
   requirement: |
     Пользователь должен иметь возможность проверять свое решение неограниченное количество раз пока соперник не выиграл или пока не закончиться время
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -547,11 +544,10 @@
   requirement: |
     Пользователь имеет возможность выбрать удобный для него язык программирования
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -573,11 +569,10 @@
   requirement: |
     Пользователь имеет возможность писать в общить чат даже если он еще не начал битву
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -591,12 +586,11 @@
   requirement: |
     Пользователь должен иметь возможность сдаться не дожидаясь окончания битвы
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     Тестовые данные
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -620,11 +614,10 @@
   requirement: |
     Пользователь имеет возможность повторить игру с предыдущим соперником не покидая страницу битвы
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -649,11 +642,10 @@
   requirement: |
     Пользователь имеет возможность сбросить игру и начать писать код заново
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -673,11 +665,10 @@
   requirement: |
     Пользователь имеет возможность вернуться в игру если он вылетел и время еще не закончилось
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -699,11 +690,10 @@
   requirement: |
     Пользователь имеет возможность менять язык задачи (с английского на русский и обратно)
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -724,11 +714,10 @@
   requirement: |
     Пользователь должен получить уведомление что он выиграл битву
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -757,11 +746,10 @@
   requirement: |
     Пользователь должен получить уведомление что он проиграл битву
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -781,11 +769,10 @@
   requirement: |
     Пользователь в случае проигрыша должен иметь возможность доиграть (дописать свой код)
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -805,11 +792,10 @@
   requirement: |
     Сайт должен быть совместим с последними версиями браузеров, т.е. с любого браузера можно зарегестрироваться,пройти авторизацию,начать игру, писать код, общаться с другими усастиками, также получать все уведомления
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     Выбраны браузеры "Google chrome", "Opera", "Firefox", "Safari" сайт должен открываться и работать корректно на всех выбранных браузерах
   steps:
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
@@ -881,13 +867,12 @@
   requirement: |
     Все данные, которые передаются от клиента на сервер должны быть выполенены без ошибок
   prerequisites: |
-    Открыта страница проекта https://codebattle.hexlet.io
+    Открыта страница регистрации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     - empty
   steps:
     - Открываем "DevTools" 
     - Находим вкладку "Network" и нажимаем
-    - Нажать "Sign in"
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Войти»
